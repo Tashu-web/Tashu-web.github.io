@@ -1,151 +1,211 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Название страницы</title>
+  <title>Главная страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<h2>Маркированный список</h2>
-	<ul>
-		<li>
-			<a href="http://www.kubsu.ru/">
-				Абсолютная гиперссылка на главную страницу сайта kubsu.ru
-			</a>
-		</li>
-		<li>
-			<a href="https://www.kubsu.ru/">
-				Абсолютная гиперссылка на главную страницу сайта kubsu.ru в протоколе https
-			</a>
-		</li>
-		<li>
-			Ссылка-изображение<br />
-			<a href="https://moodle.kubsu.ru/course/view.php?id=780">
-				<img src="test.png" alt="Тестовое изображение" style="width: 100px;" />
-			</a>
-		</li>
-		<li>
+  <h2>Маркированный список</h2>
+  <ul>
+    <li>
+      <a href="http://www.kubsu.ru/">
+        Абсолютная гиперссылка на главную страницу сайта kubsu.ru
+      </a>
+    </li>
+    <li>
+      <a href="https://www.kubsu.ru/">
+        Абсолютная гиперссылка на главную страницу
+        сайта kubsu.ru в протоколе https
+      </a>
+    </li>
+    <li>
+      Ссылка-изображение<br />
+      <a href="https://moodle.kubsu.ru/course/view.php?id=780">
+        <img src="test.png"
+           alt="Тестовое изображение"
+           style="width: 100px;" />
+      </a>
+    </li>
+    <li>
+      <a href="/test.html">
+        Сокращённая ссылка на внутреннюю страницу
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        Сокращённая ссылка на главную страницу
+      </a>
+    </li>
+    <li>
+      <a href="#bio">
+        Ссылка на фрагмент страницы, содержащий многострочное поле ввода
+      </a>
+    </li>
+    <li>
+      <a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930"
+         download=""
+         hreflang="ru">
+        Ссылка с тремя параметрами
+      </a>
+    </li>
+    <li>
+      <a id="identifiable_link">
+        Ссылка с параметром id
+      </a>
+    </li>
+    <li>
+      <a href="test.html">
+        Относительная ссылка на страницу в текущем каталоге
+      </a>
+    </li>
+    <li>
+      <a href="about/test.html">
+        Относительная ссылка на страницу в каталоге about
+      </a>
+    </li>
+    <li>
+      <a href="../test.html">
+        Относительная ссылка на страницу в каталоге уровенем выше
+      </a>
+    </li>
+    <li>
+      <a href="../../test.html">
+        Относительная ссылка на страницу в каталоге двумя уровнями выше
+      </a>
+    </li>
+    <li>
+      Контекстная <a href="test.png">ссылка</a> внутри абзаца
+    </li>
+    <li>
+      <a href="https://kubsu.ru/#includedContent">
+        Ссылка на фрагмент сторонней страницы
+      </a>
+    </li>
+    <li>
+      Ссылка из прямоугольных и круглых областей картинки<br />
+      <img src="map_test.png"
+         alt="Размеченное изображение"
+         style="width: 128px"
+         usemap="#testmap" />
+      <map name="testmap">
+        <area shape="rect"
+            coords="8,88,40,120"
+            href="../test.html"
+            alt="Ссылка на страницу в каталоге уровенем выше">
+        <area shape="circle"
+            coords="104,22,16"
+            href="test.html"
+            alt="Ссылка на страницу в текущем каталоге">
+      </map>
+    </li>
+    <li>
+      <a href="">
+        Ссылка с пустым href
+      </a>
+    </li>
+    <li>
+      <a>
+        Ссылка без href
+      </a>
+    </li>
+    <li>
+      <a href="" rel="nofollow">
+        Ссылка, по которой запрещён переход поисковиками
+      </a>
+    </li>
+    <li>
+      <!--noindex--> 
+        <a href="">
+          Ссылка, запрещённая дли индексации поисковиками
+        </a>		
+      <!--/noindex-->
+      <!--
+        Ввиду негодования валидатора я воспользовался подобной записью,
+        которой со мной любезно поделились незнакомцы из интернета
+      -->
+    </li>
+    <li>
+      <ol>
+        <li>
+          <a href="" title="Ссылка1">
+            Нумерованная ссылка 1
+          </a>
+        </li>
+        <li>
+          <a href="" title="Ссылка2">
+            Нумерованная ссылка 2
+          </a>
+        </li>
+        <li>
+          <a href="" title="Ссылка3">
+            Нумерованная ссылка 3
+          </a>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930">
+        Ссылка на файл на сервере FTP с авторизацией
+      </a>
+    </li>
+  </ul>
 
-		</li>
-		<li>
-
-		</li>
-		<li>
-			<a href="#first_field">
-				Ссылка на фрагмент страницы, содержащий первое поле ввода
-			</a>
-		</li>
-		<li>
-			<a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930" download="" filename="lection_web_1.pdf">
-				Ссылка с тремя параметрами
-			</a>
-		</li>
-		<li>
-			<a id="identifiable_link">
-				Ссылка с параметром id
-			</a>
-		</li>
-		<li>
-			<a href="test.html">
-				Относительная ссылка на страницу в текущем каталоге
-			</a>
-		</li>
-		<li>
-			<a href="about/test.html">
-				Относительная ссылка на страницу в каталоге about
-			</a>
-		</li>
-		<li>
-			<a href="../test.html">
-				Относительная ссылка на страницу в каталоге уровенем выше
-			</a>
-		</li>
-		<li>
-			<a href="../../test.html">
-				Относительная ссылка на страницу в каталоге двумя уровнями выше
-			</a>
-		</li>
-		<li>
-			Контекстная <a href="test.png">ссылка</a>  внутри абзаца
-		</li>
-		<li>
-			<a href="https://kubsu.ru/#includedContent">
-				Ссылка на фрагмент сторонней страницы
-			</a>
-		</li>
-		<li>
-			Ссылка из прямоугольных и круглых областей картинки<br/>
-			<img src="map_test.png" alt="Размеченное изображение" style="width: 128px" usemap="#testmap"/>
-			<map name="testmap">
-				<area shape="rect" coords="8,88,40,120" href="../test.html" alt="Ссылка на страницу в каталоге уровенем выше">
-				<area shape="circle" coords="104,22,16" href="test.html" alt="Ссылка на страницу в текущем каталоге">
-			</map>
-		</li>
-		<li>
-			<a href="">
-				Ссылка с пустым href
-			</a>
-		</li>
-		<li>
-			<a>
-				Ссылка без href
-			</a>
-		</li>
-		<li>
-			<a href="" rel="nofollow">
-				Ссылка, по которой запрещён переход поисковиками
-			</a>
-		</li>
-		<li>
-			<noindex>
-				<a href="">
-					Ссылка, запрещённая дли индексации поисковиками
-				</a>
-			</noindex>
-		</li>
-		<li>
-			<ol>
-				<li>
-					<a href="" title="Ссылка1">
-						Нумерованная ссылка 1
-					</a>
-				</li>
-				<li>
-					<a href="" title="Ссылка2">
-						Нумерованная ссылка 2
-					</a>
-				</li>
-				<li>
-					<a href="" title="Ссылка3">
-						Нумерованная ссылка 3
-					</a>
-				</li>
-			</ol>
-		</li>
-		<li>
-			<a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930">
-				Ссылка на файл на сервере FTP с авторизацией
-			</a>
-		</li>
-	</ul>
-
-	<label id="first_field">
-		Однострочное текстовое поле:<br />
-		<input name="field-name" />
-	</label><br />
-
-	<label>
-		Номер телефона:<br />
-		<input name="field-phone"
-			   type="tel"
-			   placeholder="Введите ваш т.к." />
-	</label><br />
-
-	<label>
-		Текстовое поле email:<br />
-		<input name="field-email"
-			   type="email"
-			   placeholder="Введите вашу почту" />
-	</label><br />
-
+  <label>
+    Однострочное текстовое поле:<br />
+    <input name="field-name" />
+  </label><br />
+  <label>
+    Номер телефона:<br />
+    <input name="field-phone"
+         type="tel"
+         placeholder="Введите ваш т.к." />
+  </label><br />
+  <label>
+    e-mail:<br />
+    <input name="field-email"
+         type="email"
+         placeholder="Введите вашу почту" />
+  </label><br />
+  <label>
+    Дата рождения:<br />
+    <input name="field-date"
+         value="2025-09-18"
+         type="date" />
+  </label><br />
+  Пол:<br />
+  <label>
+    <input type="radio" checked="checked" name="sex" value="Мужской" />
+    Мужской
+  </label>
+  <label>
+    <input type="radio" name="sex" value="Женский" />
+    Женский
+  </label><br />
+  <label>
+    Любимый язык программирования<br />
+    <select name="fav_language" multiple="multiple">
+      <option value="pascal" selected="selected">Pascal</option>
+      <option value="c">C</option>
+      <option value="cpp">C++</option>
+      <option value="js">JavaScript</option>
+      <option value="php">PHP</option>
+      <option value="python">Python</option>
+      <option value="java">Java</option>
+      <option value="haskel">Haskel</option>
+      <option value="clojure">Clojure</option>
+      <option value="prolog">Prolog</option>
+      <option value="scala">Scala</option>
+    </select>
+  </label><br />
+  <label>
+    Биография<br />
+    <textarea name="bio" id="bio">Опишите вашу жизнь</textarea>
+  </label><br />
+  <label>
+    <input type="checkbox" name="agreement" />
+    С контрактом ознакомлен(а)
+  </label><br />
+  <input type="submit" value="Сохранить" />
 </body>
 </html>
