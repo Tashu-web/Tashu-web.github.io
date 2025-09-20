@@ -1,0 +1,18 @@
+header {
+    height: 100px;
+    width: 100vw;
+    background-color: darkblue;
+    align-content: center;
+}
+
+img.logo {
+    margin: 0 15px;
+    float: left;
+}
+
+
+nav {
+    color: white;
+    top: 0;
+    right: 0;
+}
