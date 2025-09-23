@@ -1,18 +1,54 @@
-header {
-    height: 100px;
-    width: 100vw;
-    background-color: darkblue;
-    align-content: center;
+body {
+    margin: 0px
 }
 
-img.logo {
-    margin: 0 15px;
+header {
+    height: 67px;
+    width: 100vw;
+    background-color: darkblue;
+    padding: 15px;
+}
+
+.head {
+    max-width: 960px;
+}
+
+.logo {
     float: left;
 }
 
-
 nav {
+    width: 60%;
+    margin-left: auto;
+}
+
+.nav_element {
+    margin: 0 auto;
+    float: left;
+    width: 33.3%;
     color: white;
-    top: 0;
-    right: 0;
+}
+
+.name {
+    color: white;
+    margin: 0
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%;
+    background-color: cornflowerblue;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.even {
+    background-color: burlywood;
+}
+
+.odd {
+    background-color: blanchedalmond;
 }
