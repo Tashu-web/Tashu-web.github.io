@@ -10,7 +10,7 @@ header {
 }
 
 .head {
-    max-width: 960px;
+    max-width: 80vw;
 }
 
 .logo {
@@ -52,3 +52,13 @@ table {
 .odd {
     background-color: blanchedalmond;
 }
+
+footer {
+    margin-top: 25px;
+    background-color: darkblue;
+}
+
+    footer h2 {
+        margin: 0px;
+        color: white;
+    }

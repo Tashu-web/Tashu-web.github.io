@@ -9,17 +9,57 @@
 <body>
 	<header>
 		<div class="head">
-			<img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png"
-				 alt="Логотип"
-				 class="logo" />
+			<div class="info">
+				<img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png"
+					 alt="Логотип"
+					 class="logo" />
+				<h2 class="name">Вебь</h2>
+			</div>
 			<nav>
 				<a class="nav_element">Ссылка 1</a>
 				<a class="nav_element">Ссылка 2</a>
 				<a class="nav_element">Ссылка 3</a>
 			</nav>
-			<h2 class="name">Вебь</h2>
 		</div>
 	</header>
+
+	<div class="content">
+		<table>
+			<tr class="even">
+				<th colspan="4">Расписание занятий на текущюю неделю</th>
+			</tr>
+			<tr class="odd">
+				<th>НОМЕР ПАРЫ</th>
+				<th>Понедельник</th>
+				<th>Вторник</th>
+				<th>Среда</th>
+			</tr>
+			<tr class="even">
+				<td>1</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr class="odd">
+				<td>2</td>
+				<td>ДП: Основы программирования</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr class="even">
+				<td>3</td>
+				<td>-</td>
+				<td>ЛК: Основы программирования</td>
+				<td>ЛР: Математический анализ</td>
+			</tr>
+			<tr class="odd">
+				<td>4</td>
+				<td>-</td>
+				<td>ЛР: Основы программирования</td>
+				<td>ПР: Основы российской государственности</td>
+			</tr>
+		</table>
+	</div>
 
 	<div class="content">
 		<h2>Гиперссылки</h2>
@@ -165,101 +205,68 @@
 	</div>
 
 	<div class="content">
-		<table>
-			<tr class="even">
-				<th colspan="4">Расписание занятий на текущюю неделю</th>
-			</tr>
-			<tr class="odd">
-				<th>НОМЕР ПАРЫ</th>
-				<th>Понедельник</th>
-				<th>Вторник</th>
-				<th>Среда</th>
-			</tr>
-			<tr class="even">
-				<td>1</td>
-				<td>-</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr class="odd">
-				<td>2</td>
-				<td>ДП: Основы программирования</td>
-				<td>-</td>
-				<td>-</td>
-			</tr>
-			<tr class="even">
-				<td>3</td>
-				<td>-</td>
-				<td>ЛК: Основы программирования</td>
-				<td>ЛР: Математический анализ</td>
-			</tr>
-			<tr class="odd">
-				<td>4</td>
-				<td>-</td>
-				<td>ЛР: Основы программирования</td>
-				<td>ПР: Основы российской государственности</td>
-			</tr>
-		</table>
-	</div>
-
-	<div class="content">
 		<h2>Форма</h2>
-		<label>
-			Однострочное текстовое поле:<br />
-			<input name="field-name" />
-		</label><br />
-		<label>
-			Номер телефона:<br />
-			<input name="field-phone"
-				   type="tel"
-				   placeholder="Введите ваш т.к." />
-		</label><br />
-		<label>
-			e-mail:<br />
-			<input name="field-email"
-				   type="email"
-				   placeholder="Введите вашу почту" />
-		</label><br />
-		<label>
-			Дата рождения:<br />
-			<input name="field-date"
-				   value="2025-09-18"
-				   type="date" />
-		</label><br />
-		Пол:<br />
-		<label>
-			<input type="radio" checked="checked" name="sex" value="Мужской" />
-			Мужской
-		</label>
-		<label>
-			<input type="radio" name="sex" value="Женский" />
-			Женский
-		</label><br />
-		<label>
-			Любимый язык программирования<br />
-			<select name="fav_language" multiple="multiple">
-				<option value="pascal" selected="selected">Pascal</option>
-				<option value="c">C</option>
-				<option value="cpp">C++</option>
-				<option value="js">JavaScript</option>
-				<option value="php">PHP</option>
-				<option value="python">Python</option>
-				<option value="java">Java</option>
-				<option value="haskel">Haskel</option>
-				<option value="clojure">Clojure</option>
-				<option value="prolog">Prolog</option>
-				<option value="scala">Scala</option>
-			</select>
-		</label><br />
-		<label>
-			Биография<br />
-			<textarea name="bio" id="bio">Опишите вашу жизнь</textarea>
-		</label><br />
-		<label>
-			<input type="checkbox" name="agreement" />
-			С контрактом ознакомлен(а)
-		</label><br />
-		<input type="submit" value="Сохранить" />
+		<form>
+			<label>
+				Однострочное текстовое поле:<br />
+				<input name="field-name" />
+			</label><br />
+			<label>
+				Номер телефона:<br />
+				<input name="field-phone"
+					   type="tel"
+					   placeholder="Введите ваш т.к." />
+			</label><br />
+			<label>
+				e-mail:<br />
+				<input name="field-email"
+					   type="email"
+					   placeholder="Введите вашу почту" />
+			</label><br />
+			<label>
+				Дата рождения:<br />
+				<input name="field-date"
+					   value="2025-09-18"
+					   type="date" />
+			</label><br />
+			Пол:<br />
+			<div class="radio-group">
+				<label>
+					<input type="radio" checked="checked" name="sex" value="Мужской" />
+					Мужской
+				</label>
+				<label>
+					<input type="radio" name="sex" value="Женский" />
+					Женский
+				</label>
+			</div>
+			<br />
+			<label>
+				Любимый язык программирования<br />
+				<select name="fav_language" multiple="multiple">
+					<option value="pascal" selected="selected">Pascal</option>
+					<option value="c">C</option>
+					<option value="cpp">C++</option>
+					<option value="js">JavaScript</option>
+					<option value="php">PHP</option>
+					<option value="python">Python</option>
+					<option value="java">Java</option>
+					<option value="haskel">Haskel</option>
+					<option value="clojure">Clojure</option>
+					<option value="prolog">Prolog</option>
+					<option value="scala">Scala</option>
+				</select>
+			</label><br />
+			<label>
+				Биография<br />
+				<textarea name="bio" id="bio">Опишите вашу жизнь</textarea>
+			</label><br />
+			<label>
+				<input type="checkbox" name="agreement" />
+				С контрактом ознакомлен(а)
+			</label><br />
+			<input type="submit" value="Сохранить" />
+		</form>
 	</div>
 
 	<footer>
