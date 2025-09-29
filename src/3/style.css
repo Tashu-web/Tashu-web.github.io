@@ -6,20 +6,18 @@ body {
 
 header {
     width: 100%;
-    padding: 15px;
 }
 
 .head {
-    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
-@media (min-width: 800px) {
+@media screen and (max-width: 800px) {
     .head {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: 90vw;
+        flex-direction: column;
     }
 }
 
@@ -29,6 +27,7 @@ header {
     display: flex;
     flex-direction: row;
     flex: 1;
+    padding: 15px;
 }
 
 .logo {
@@ -42,40 +41,45 @@ header {
 
 nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     flex: 3;
-    width: 100vw;
+    width: 60%;
     background-color: darkblue;
 }
 
-@media (min-width: 800px) {
+@media screen and (max-width: 800px) {
     nav {
-        width: 60%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: start;
+        width: 100vw;
+        border-top: 10px solid white;
     }
 }
 
 .nav_element {
     color: white;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .nav_element {
+        margin: 10px 0px 10px 15px;
+    }
 }
 
 .content {
-    width: 100vw;
     display: flex;
     flex-direction: column;
-    margin: 10px 0px;
+    width: 80%;
+    margin: 20px auto;
     background-color: cornflowerblue;
 }
 
-@media (min-width: 800px) {
+@media screen and (max-width: 800px) {
     .content {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: 20px auto;
-        background-color: cornflowerblue;
+        width: 100vw;
+        margin: 10px 0px;
     }
 }
 
@@ -103,7 +107,6 @@ table {
 }
 
 footer {
-    margin-top: 25px;
     background-color: darkblue;
 }
 
