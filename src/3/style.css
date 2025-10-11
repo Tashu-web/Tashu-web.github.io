@@ -11,14 +11,14 @@ header {
 
 .head {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .head {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
@@ -42,47 +42,47 @@ header {
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
     flex: 3;
-    width: 60%;
+    width: 100vw;
+    border-top: 10px solid white;
     background-color: darkblue;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     nav {
-        flex-direction: column;
-        justify-content: start;
-        width: 100vw;
-        border-top: 10px solid white;
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+        border-top: 0px;
     }
 }
 
 .nav_element {
     color: white;
-    margin-top: 15px;
-    margin-right: 15px;
+    margin: 10px 0px 10px 15px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .nav_element {
-        margin: 10px 0px 10px 15px;
+        margin: 15px 20px 0px 20px;
     }
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100vw;
     max-width: 960px;
-    margin: 20px auto;
+    margin: 10px 0px;
     background-color: cornflowerblue;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .content {
-        width: 100vw;
-        margin: 10px 0px;
+        width: 80%;
+        margin: 20px auto;
     }
 }
 
