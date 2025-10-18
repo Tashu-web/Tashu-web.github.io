@@ -6,6 +6,7 @@ body {
 }
 
 header {
+    order: -1;
     width: 100%;
 }
 
@@ -86,6 +87,30 @@ nav {
     }
 }
 
+#content-table {
+    order: 2;
+}
+
+#content-links {
+    order: 1;
+}
+
+#content-form {
+    order: 3;
+}
+
+@media screen and (max-width: 800px) {
+    #content-table {
+        order: 1;
+    }
+
+    #content-links {
+        order: 2;
+    }
+}
+
+
+
 table {
     width: 100%;
     text-align: center;
@@ -112,6 +137,7 @@ table {
 
 footer {
     background-color: darkblue;
+    order: 10;
 }
 
     footer h2 {
