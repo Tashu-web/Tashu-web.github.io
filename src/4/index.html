@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Главная страница</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body class="min-vw-100 m-0 d-flex flex-column">
+	<header class="w-100" style="background-color: darkblue;">
+		<div class="d-flex flex-column flex-md-row justify-content-between w-100">
+			<div class="d-flex flex-row p-3">
+				<img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png"
+					 alt="Логотип"/>
+				<h2 class="my-auto text-white">Вебь</h2>
+			</div>
+			<nav class="d-flex flex-column flex-md-row justify-content-start mw-vw-60" style="background-color: darkblue;">
+				<a class="my-2 my-md-3 mx-3 text-white">Ссылка 1</a>
+				<a class="my-2 my-md-3 mx-3 text-white">Ссылка 2</a>
+				<a class="my-2 my-md-3 mx-3 text-white">Ссылка 3</a>
+			</nav>
+		</div>
+	</header>
+
+	<div>
+		<table class="d-flex flex-column mx-auto" style="max-width: 90%">
+			<tr style="background-color: burlywood;">
+				<th colspan="4">Расписание занятий на текущюю неделю</th>
+			</tr>
+			<tr style="background-color: blanchedalmond;">
+				<th>НОМЕР ПАРЫ</th>
+				<th>Понедельник</th>
+				<th>Вторник</th>
+				<th>Среда</th>
+			</tr>
+			<tr style="background-color: burlywood;">
+				<td>1</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr style="background-color: blanchedalmond;">
+				<td>2</td>
+				<td>ДП: Основы программирования</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr style="background-color: burlywood;">
+				<td>3</td>
+				<td>-</td>
+				<td>ЛК: Основы программирования</td>
+				<td>ЛР: Математический анализ</td>
+			</tr>
+			<tr style="background-color: blanchedalmond;">
+				<td>4</td>
+				<td>-</td>
+				<td>ЛР: Основы программирования</td>
+				<td>ПР: Основы российской государственности</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="content">
+		<h2>Гиперссылки</h2>
+		<ul>
+			<li>
+				<a href="http://www.kubsu.ru/">
+					Абсолютная гиперссылка на главную страницу сайта kubsu.ru
+				</a>
+			</li>
+			<li>
+				<a href="https://www.kubsu.ru/">
+					Абсолютная гиперссылка на главную страницу
+					сайта kubsu.ru в протоколе https
+				</a>
+			</li>
+			<li>
+				Ссылка-изображение<br />
+				<a href="https://moodle.kubsu.ru/course/view.php?id=780">
+					<img src="../test.png"
+						 alt="Тестовое изображение"
+						 style="width: 100px;" />
+				</a>
+			</li>
+			<li>
+				<a href="../test.html">
+					Сокращённая ссылка на внутреннюю страницу
+				</a>
+			</li>
+			<li>
+				<a href="/">
+					Сокращённая ссылка на главную страницу
+				</a>
+			</li>
+			<li>
+				<a href="#bio">
+					Ссылка на фрагмент страницы, содержащий многострочное поле ввода
+				</a>
+			</li>
+			<li>
+				<a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930"
+				   download=""
+				   hreflang="ru">
+					Ссылка с тремя параметрами
+				</a>
+			</li>
+			<li>
+				<a id="identifiable_link">
+					Ссылка с параметром id
+				</a>
+			</li>
+			<li>
+				<a href="test.html">
+					Относительная ссылка на страницу в текущем каталоге
+				</a>
+			</li>
+			<li>
+				<a href="../about/test.html">
+					Относительная ссылка на страницу в каталоге about
+				</a>
+			</li>
+			<li>
+				<a href="../test.html">
+					Относительная ссылка на страницу в каталоге уровенем выше
+				</a>
+			</li>
+			<li>
+				<a href="../../test.html">
+					Относительная ссылка на страницу в каталоге двумя уровнями выше
+				</a>
+			</li>
+			<li>
+				Контекстная <a href="test.png">ссылка</a> внутри абзаца
+			</li>
+			<li>
+				<a href="https://kubsu.ru/#includedContent">
+					Ссылка на фрагмент сторонней страницы
+				</a>
+			</li>
+			<li>
+				Ссылка из прямоугольных и круглых областей картинки<br />
+				<img src="../map_test.png"
+					 alt="Размеченное изображение"
+					 style="width: 128px"
+					 usemap="#testmap" />
+				<map name="testmap">
+					<area shape="rect"
+						  coords="8,88,40,120"
+						  href="../test.html"
+						  alt="Ссылка на страницу в каталоге уровенем выше">
+					<area shape="circle"
+						  coords="104,22,16"
+						  href="test.html"
+						  alt="Ссылка на страницу в текущем каталоге">
+				</map>
+			</li>
+			<li>
+				<a href="">
+					Ссылка с пустым href
+				</a>
+			</li>
+			<li>
+				<a>
+					Ссылка без href
+				</a>
+			</li>
+			<li>
+				<a href="" rel="nofollow">
+					Ссылка, по которой запрещён переход поисковиками
+				</a>
+			</li>
+			<li>
+				<!--noindex-->
+				<a href="">
+					Ссылка, запрещённая дли индексации поисковиками
+				</a>
+				<!--/noindex-->
+			</li>
+			<li>
+				<ol>
+					<li>
+						<a href="" title="Ссылка1">
+							Нумерованная ссылка 1
+						</a>
+					</li>
+					<li>
+						<a href="" title="Ссылка2">
+							Нумерованная ссылка 2
+						</a>
+					</li>
+					<li>
+						<a href="" title="Ссылка3">
+							Нумерованная ссылка 3
+						</a>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<a href="https://moodle.kubsu.ru/mod/resource/view.php?id=16930">
+					Ссылка на файл на сервере FTP с авторизацией
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<h2>Форма</h2>
+		<form>
+			<label>
+				Однострочное текстовое поле:<br />
+				<input name="field-name" />
+			</label><br />
+			<label>
+				Номер телефона:<br />
+				<input name="field-phone"
+					   type="tel"
+					   placeholder="Введите ваш т.к." />
+			</label><br />
+			<label>
+				e-mail:<br />
+				<input name="field-email"
+					   type="email"
+					   placeholder="Введите вашу почту" />
+			</label><br />
+			<label>
+				Дата рождения:<br />
+				<input name="field-date"
+					   value="2025-09-18"
+					   type="date" />
+			</label><br />
+			Пол:<br />
+			<div class="radio-group">
+				<label>
+					<input type="radio" checked="checked" name="sex" value="Мужской" />
+					Мужской
+				</label>
+				<label>
+					<input type="radio" name="sex" value="Женский" />
+					Женский
+				</label>
+			</div>
+			<br />
+			<label>
+				Любимый язык программирования<br />
+				<select name="fav_language" multiple="multiple">
+					<option value="pascal" selected="selected">Pascal</option>
+					<option value="c">C</option>
+					<option value="cpp">C++</option>
+					<option value="js">JavaScript</option>
+					<option value="php">PHP</option>
+					<option value="python">Python</option>
+					<option value="java">Java</option>
+					<option value="haskel">Haskel</option>
+					<option value="clojure">Clojure</option>
+					<option value="prolog">Prolog</option>
+					<option value="scala">Scala</option>
+				</select>
+			</label><br />
+			<label>
+				Биография<br />
+				<textarea name="bio" id="bio">Опишите вашу жизнь</textarea>
+			</label><br />
+			<label>
+				<input type="checkbox" name="agreement" />
+				С контрактом ознакомлен(а)
+			</label><br />
+			<input type="submit" value="Сохранить" />
+		</form>
+	</div>
+
+	<footer>
+		<h2>(с) Мадин Ташу</h2>
+	</footer>
+</body>
+</html>
