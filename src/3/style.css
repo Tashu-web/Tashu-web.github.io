@@ -75,7 +75,6 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    max-width: 960px;
     margin: 10px 0px;
     background-color: cornflowerblue;
 }
@@ -83,6 +82,7 @@ nav {
 @media screen and (min-width: 800px) {
     .content {
         width: 80%;
+        max-width: 960px;
         margin: 20px auto;
     }
 }
