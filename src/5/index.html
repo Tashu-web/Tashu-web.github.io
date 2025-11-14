@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор стоимости заказа</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+        .calculator {
+            text-align: center;
+            background-color: slategray;
+            padding: 30px;
+        }
+
+        button {
+            background-color: mediumaquamarine;
+            cursor: pointer;
+			border: none;
+            padding: 15px;
+            width: 100%;
+        }
+
+		.result {
+			min-height: 25px;
+			margin-top: 25px;
+			background-color: white;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="calculator">
+		<h1>Калькулятор стоимости заказа</h1>
+
+		<div class="form-group">
+			<select id="product" style="width: 100%; padding: 15px;">
+				<option value="1500">Смартфон - 1500₽</option>
+				<option value="800">Наушники - 800₽</option>
+				<option value="2500">Планшет - 2500₽</option>
+				<option value="350">Флеш-накопитель - 350₽</option>
+				<option value="1200">Умные часы - 1200₽</option>
+			</select>
+		</div>
+
+		<div style="margin: 20px 0px;">
+			<input type="text" id="quantity" placeholder="Количество" style="width: 92%; padding: 15px;">
+		</div>
+
+		<button id="calculate-btn">Рассчитать стоимость</button>
+
+		<div class="result" id="result"></div>
+	</div>
+
+	<script src="script.js" defer></script>
+</body>
+</html>
