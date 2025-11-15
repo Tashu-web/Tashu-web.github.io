@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultDiv = document.getElementById('result');
 
     calculateBtn.addEventListener('click', function () {
-        const productPrice = parseInt(productSelect.value, 10);
         const quantity = parseInt(quantityInput.value.trim(), 10);
-        const totalCost = productPrice * quantity;
-        resultDiv.textContent = `${totalCost} ₽`;
+
+        if (Number.isInteger(quantity) && quantity >= 0) {
+            const productPrice = parseInt(productSelect.value, 10);
+            const totalCost = productPrice * quantity;
+            resultDiv.textContent = `${totalCost} ₽`;
+        } else resultDiv.textContent = `Недействительное значение количества`;       
     });
 });
