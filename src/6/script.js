@@ -11,7 +11,7 @@ const warrantyValue = 100;
 
 let selectedOption = "";
 let selectedColor = "";
-let checkbox = "";
+let checkbox = "false";
 
 function updateView() {
 	const colorSelect = document.getElementById('color');
@@ -27,7 +27,7 @@ function updatePrice() {
 
 	let totalPrice = 0;
 	totalPrice += (selectedOption == "headphones" ? colorsValue[selectedColor] : 0);
-	totalPrice += (selectedOption == "tablet" && checkbox ? warrantyValue : 0);
+	totalPrice += (selectedOption == "tablet" && checkbox == true ? warrantyValue : 0);
 
 	const productPrice = goodsValue[selectedOption];
 	if (productPrice != undefined) {
