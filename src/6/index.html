@@ -37,36 +37,34 @@
 	<div class="calculator">
 		<h1>Калькулятор стоимости заказа</h1>
 
-		<label>
-			<input type="radio" checked="checked" name="goods" value="smartphone" />
-			Смартфон - 1500₽
-		</label>
-		<label>
-			<input type="radio" name="goods" value="headphones" />
-			Наушники - 800₽
-		</label>
-		<label>
-			<input type="radio" name="goods" value="tablet" />
-			Планшет - 2500₽
-		</label>
-
-		<div>
-			<select id="color" style="width: 100%; padding: 15px; margin: 10px 0px;">
-				<option value="pink">Розовый</option>
-				<option value="balck">Чёрный (+500₽)</option>
-			</select>
+		<div id ="goods" style="color: white; margin-bottom: 10px;">
+			<label>
+				<input type="radio" checked="checked" name="goods" value="smartphone" />
+				Смартфон - 1500₽
+			</label>
+			<label>
+				<input type="radio" name="goods" value="headphones" />
+				Наушники - 800₽
+			</label>
+			<label>
+				<input type="radio" name="goods" value="tablet" />
+				Планшет - 2500₽
+			</label>
 		</div>
 
-		<label style="color: white;">
-			<input type="checkbox" id="property" />
+		<select id="color" style="width: 100%; padding: 15px;">
+			<option value="pink">Розовый</option>
+			<option value="black">Чёрный (+300₽)</option>
+		</select>
+
+		<label id="property" style="color: white;">
+			<input type="checkbox" id="checkbox" />
 			Продлённая гарантия: +100₽
 		</label>
 
 		<div style="margin: 20px 0px;">
 			<input type="text" id="quantity" placeholder="Количество" style="width: 92%; padding: 15px;">
 		</div>
-
-		<button id="calculate-btn">Рассчитать стоимость</button>
 
 		<div class="result" id="result"></div>
 	</div>
