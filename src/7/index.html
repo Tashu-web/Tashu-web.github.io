@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Галерея-слайдер</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		body {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.gallery-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			min-width: 100%;
+			max-width: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@media (min-width: 768px) {
+			.gallery-wrapper {
+				min-width: 80%;
+				max-width: 80%;
+			}
+		}
+
+		.gallery-track {
+			display: flex;
+			flex-direction: row;
+			transition: transform 0.3s;
+			width: 100%;
+			margin: 0 10px;
+		}
+
+		.slide {
+			display: flex;
+			flex: 0 0 100%;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@media (min-width: 768px) {
+			.slide {
+				flex: 0 0 33.333%;
+			}
+		}
+
+			.slide img {
+				max-width: 100%;
+				min-width: 200px;
+				width: auto;
+				max-height: 300px;
+				height: auto;
+				display: block;
+			}
+
+		.btn {
+			background: white;
+			width: 30px;
+			height: 30px;
+			
+			cursor: pointer;
+			z-index: 2;
+		}
+
+		@media (min-width: 768px) {
+			.btn {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.btn:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		.pager {
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.pager-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: lightsteelblue;
+			display: inline-block;
+			margin: 0 5px;
+			cursor: pointer;
+		}
+
+			.pager-dot.active {
+				background: darkslategrey;
+			}
+	</style>
+</head>
+<body>
+	<div class="gallery-wrapper">
+		<button class="btn" id="prevBtn">←</button>
+
+		<div style="flex-grow: 1; overflow: hidden;">
+			<div class="gallery-track" id="galleryTrack">
+				<div class="slide">
+					<img alt="Fulgrim" src="Fulgrim.jpg" />
+				</div>
+				<div class="slide">
+					<img alt="Angron" src="Angron.jpg" />
+				</div>
+				<div class="slide">
+					<img alt="Mortarion" src="Mortarion.jpg" />
+				</div>
+				<div class="slide">
+					<img alt="Magnus" src="Magnus.jpg" />
+				</div>
+				<div class="slide">
+					<img alt="Horus" src="Horus.jpg" />
+				</div>
+			</div>
+		</div>
+		
+
+		<button class="btn" id="nextBtn">→</button>
+	</div>
+
+	<div class="pager" id="pager">
+		<span class="pager-dot"></span>
+		<span class="pager-dot"></span>
+		<span class="pager-dot"></span>
+		<span class="pager-dot"></span>
+		<span class="pager-dot"></span>
+	</div>
+
+	<script>
+		let currentSlide = 0, pagerSlide = 1;
+		let slidesPerView = 3;
+		const $slides = $('.slide');
+		const totalSlides = $slides.length;
+		const $galleryTrack = $('#galleryTrack');
+
+
+		function updateOnResize() {
+			$('.pager-dot').each(function (index, element) {
+				if ($(window).width() > 768 && (index == 0 || index == 4)) $(this).hide();
+				else $(this).show();
+			})
+			slidesPerView = $(window).width() <= 768 ? 1 : 3;
+			console.log(pagerSlide);
+			if (slidesPerView == 3 && pagerSlide <= 0) pagerSlide = 1;
+			else if (slidesPerView == 3 && pagerSlide >= totalSlides - 1) pagerSlide = totalSlides - 2;
+			updateGallery();
+		}
+
+		function updateGallery() {
+			currentSlide = pagerSlide - ($(window).width() > 768 ? 1 : 0);
+
+			const slideWidth = 100 / slidesPerView;
+			$galleryTrack.css('transform', `translateX(${-currentSlide * slideWidth}%)`);
+
+			$('#prevBtn').prop('disabled', currentSlide <= 0);
+			$('#nextBtn').prop('disabled', currentSlide >= totalSlides - slidesPerView);
+
+			$('.pager-dot').removeClass('active').eq(pagerSlide).addClass('active');
+		}
+
+		$(document).ready(function () {
+			updateOnResize();
+			updateGallery();
+
+			$('.pager-dot').on('click', function () {
+				pagerSlide = $('.pager-dot').index(this);
+				updateGallery();
+			});
+
+			$('#nextBtn').on('click', function () {
+				if (currentSlide < totalSlides - slidesPerView) {
+					pagerSlide++;
+					updateGallery();
+				}
+			});
+
+			$('#prevBtn').on('click', function () {
+				if (currentSlide > 0) {
+					pagerSlide--;
+					updateGallery();
+				}
+			});
+
+			$(window).on('resize', updateOnResize);
+		});
+	</script>
+</body>
+</html>
