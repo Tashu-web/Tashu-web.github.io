@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Форма обратной связи</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<div class="container">
+		<button class="cta-button" id="openFormButton">
+			<h2>Открыть форму обратной связи</h2>
+		</button>
+	</div>
+
+	<div class="popup-overlay" id="popupOverlay">
+		<div class="popup-content">
+			<div class="popup-header">
+				<h2>Форма обратной связи</h2>
+				<button class="close-button" id="closeFormButton">
+					<h1>x</h1>
+				</button>
+			</div>
+
+			<div class="form-container">
+				<form id="feedbackForm">
+					<div class="form-group">
+						<label for="fullName">ФИО*</label>
+						<input type="text" id="fullName" name="fullName" class="form-control" required placeholder="Введите ваше полное имя">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email*</label>
+						<input type="email" id="email" name="email" class="form-control" required placeholder="example@domain.com">
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Телефон</label>
+						<input type="tel" id="phone" name="phone" class="form-control" placeholder="+7 (999) 123-45-67">
+					</div>
+
+					<div class="form-group">
+						<label for="organization">Организация</label>
+						<input type="text" id="organization" name="organization" class="form-control" placeholder="Название вашей организации">
+					</div>
+
+					<div class="form-group">
+						<label for="message">Сообщение *</label>
+						<textarea id="message" name="message" class="form-control" required placeholder="Введите ваше сообщение..."></textarea>
+					</div>
+
+					<div class="checkbox-group">
+						<input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+						<label for="privacyPolicy">
+							Я согласен(на) с мнением автора страницы*
+						</label>
+					</div>
+
+					* - обязательные поля
+
+					<button type="submit" class="submit-button" id="submitButton">
+						<h3>Отправить сообщение</h3>
+					</button>
+
+					<div class="message success" id="successMessage">
+						Ваше сообщение успешно отправлено!
+					</div>
+
+					<div class="message error" id="errorMessage">
+						Ошибка отправки. Попробуйте еще раз.
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js" defer></script>
+</body>
+</html>

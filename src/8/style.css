@@ -1,0 +1,196 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 10px;
+	
+}
+
+@media(min-width: 800px) {
+	.container {
+		max-width: 80%;
+		padding: 20px;
+	}
+}
+
+.cta-button {
+	background-color: cadetblue;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.popup-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.popup-content {
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+	height: 100%;
+	min-width: 60%;
+	border: 1px solid black;
+	border-radius: 8px;
+	background-color: white;
+	overflow: hidden;
+}
+
+@media(min-width:800px) {
+	.popup-content {
+		height: auto;
+		border-radius: 15px;
+	}
+}
+
+.popup-header {
+	background-color: cadetblue;
+	color: white;
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+	.popup-header h2 {
+		margin: 0;
+		padding: 0;
+	}
+
+@media(min-width: 800px) {
+	.popup-header {
+		padding: 20px 30px;
+	}
+}
+
+.close-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: cadetblue;
+	border: none;
+	color: white;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+	.close-button:hover {
+		background-color: darkturquoise;
+	}
+
+.form-container {
+	padding: 5px 15px 5px 15px;
+	overflow-y: auto;
+}
+
+@media(min-width: 800px) {
+	.form-container {
+		padding: 30px;
+	}
+}
+
+.form-group {
+	margin-bottom: 10px;
+}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+@media (min-width: 800px) {
+	.form-group {
+		margin-bottom: 20px;
+	}
+}
+
+.form-control {
+	width: 100%;
+	padding: 12px 15px;
+	border-radius: 8px;
+}
+
+textarea.form-control {
+	min-height: 40px;
+	resize: none;
+}
+
+@media (min-width: 800px) {
+	textarea.form-control {
+		min-height: 120px;
+	}
+}
+
+.checkbox-group {
+	display: flex;
+	flex-direction: row;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+	.checkbox-group input {
+		margin-right: 10px;
+	}
+
+.submit-button {
+	width: 100%;
+	padding: 15px;
+	background-color: cadetblue;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+	.submit-button:hover {
+		background-color: darkturquoise;
+	}
+
+	.submit-button:disabled {
+		background-color: darkgray;
+		cursor: not-allowed;
+	}
+
+	.submit-button h3 {
+		margin: 0;
+	}
+
+.message {
+	padding: 15px;
+	border-radius: 8px;
+	margin-top: 20px;
+	display: none;
+	text-align: center;
+}
+
+.success {
+	background-color: yellowgreen;
+	border: 1px solid black;
+}
+
+.error {
+	background-color: firebrick;
+	border: 1px solid black;
+}
