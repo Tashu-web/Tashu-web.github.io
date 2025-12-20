@@ -45,9 +45,11 @@ function openForm() {
 	document.getElementById('popupOverlay').style.display = 'flex';
 	isPopupOpen = true;
 
-	const currentUrl = window.location.href.split('#')[0];
-	const newUrl = currentUrl + '#feedback-form';
-	history.pushState({ formOpen: true }, '', newUrl);
+	if (window.location.hash != '#feedback-form') {
+		const currentUrl = window.location.href.split('#')[0];
+		const newUrl = currentUrl + '#feedback-form';
+		history.pushState({ formOpen: true }, '', newUrl);
+	}
 }
 
 function closeForm() {
@@ -55,9 +57,7 @@ function closeForm() {
 	isPopupOpen = false;
 
 	if (window.location.hash === '#feedback-form') {
-		console.log("Page closed");
-		const oldUrl = window.location.href.split('#')[0];
-		history.pushState({ formOpen: false }, '', oldUrl);
+		history.back();
 	}
 }
 
